@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bg-music" loop>
+      <source src="music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+      <div class="header">
+        <img src="banner.jpg" alt="Cover" />
+        <div class="text-overlay">
+          <p>В ᴋᴀждᴏʍ ᴄᴇᴩдцᴇ ᴄᴋᴩыᴛᴀ ᴄʙᴇᴛᴧᴀя иᴄᴋᴩᴀ,</p>
+          <p>нᴏ нᴇ ᴋᴀждый ᴩᴇɯиᴛᴄя ᴇᴇ ᴩᴀɜжᴇчь.</p>
+        </div>
+      </div>
+
+      <div class="profile">
+        <img src="avatar.jpg" alt="Profile" />
+        <h1>Ognestrelov</h1>
+        <p>Adapter ognestrelova</p>
+        <button id="music-toggle" onclick="toggleMusic()">
+          ▶ Воспроизвести музыку
+        </button>
+      </div>
+
+      <div class="links">
+        <a class="link" href="https://t.me/bioprog" target="_blank">BIO TG</a>
+        <a class="link" href="https://t.me/musicosint" target="_blank"
+          >PLAYLIST</a
+        >
+        <a class="link" href="https://t.me/viebosint" target="_blank">WORKS</a>
+      </div>
+    </div>
+
+    <script>
+      const music = document.getElementById("bg-music");
+      const button = document.getElementById("music-toggle");
+
+      function toggleMusic() {
+        if (music.paused) {
+          music.play();
+          button.textContent = "⏸ Остановить музыку";
+        } else {
+          music.pause();
+          button.textContent = "▶ Воспроизвести музыку";
+        }
+      }
+    </script>
+  </body>
+</html>
